@@ -43,7 +43,7 @@ html, body {
 }
 .nav-links li {
     position: relative;
-    padding : 5px;
+    padding : 3px;
 }
 .nav-links a {
     text-decoration: none;
@@ -528,6 +528,10 @@ color: #f39c12; /* Change color on hover */
 @media (max-width: 480px) {
     .footer-contact a {
         font-size: 14px; /* Adjusted font size for very small screens */
+    }
+    .nav-links li {
+        position: relative;
+        padding: 10px;
     }
 }
 /* CSS for mobile view */
