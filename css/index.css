@@ -546,13 +546,23 @@ color: #f39c12; /* Change color on hover */
 nav.active {
     display: block; /* Show when active */
 }
-     .menu-toggle {
+   .menu-toggle {
     position: absolute;
     top: 15px;
     right: 20px;
+    width: 50px; /* Increases clickable area */
+    height: 50px; /* Ensures touch-friendly size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-size: 24px;
-    z-index: 10000; /* Ensure it's above */
+    z-index: 10000; /* Keeps it above other elements */
+    background: transparent; /* Ensures no background issues */
+}
+     header {
+    position: relative;
+    z-index: 10000; /* Keeps header above */
 }
 } 
 
