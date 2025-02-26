@@ -43,7 +43,7 @@ html, body {
 }
 .nav-links li {
     position: relative;
-    padding : 3px;
+    padding: 10px;
 }
 .nav-links a {
     text-decoration: none;
@@ -525,45 +525,47 @@ color: #f39c12; /* Change color on hover */
     }
 }
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
     .footer-contact a {
-        font-size: 14px; 
+        font-size: 14px; /* Adjusted font size for very small screens */
     }
     .nav-links li {
         position: relative;
         padding: 10px;
+        margin-left: 20px;
     }
-     nav {
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    width: 100%;
-    background: #8B5703; /* Adjust color */
-    display: none; /* Hidden by default */
-    z-index: 9999; /* High value to be on top */
+    .nav-links {
+        max-height: 80vh;
+        overflow-y: auto;
+        
+    }
+    .nav-links li {
+        padding: 8px 12px; /* Adjust padding to fit more items */
+    }
+    .dropdown-menu {
+        position: relative; /* Keeps it inside the parent menu */
+        
+    }
+    
+    .navbar {
+        top: 0;
+        position: fixed; /* Ensures it stays within the screen */
+    }
 }
+/* CSS for mobile view */
 
-nav.active {
-    display: block; /* Show when active */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #875403;
+        width: 100%;
+        padding: 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
 }
-   .menu-toggle {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 50px; /* Increases clickable area */
-    height: 50px; /* Ensures touch-friendly size */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10000; /* Keeps it above other elements */
-    background: transparent; /* Ensures no background issues */
-}
-     header {
-    position: relative;
-    z-index: 10000; /* Keeps header above */
-}
-} 
-
-
