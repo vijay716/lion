@@ -525,6 +525,16 @@ color: #f39c12; /* Change color on hover */
     }
 }
 
+/* @media (max-width: 480px) {
+    .footer-contact a {
+        font-size: 14px; 
+    }
+    .nav-links li {
+        position: relative;
+        padding: 10px;
+    }
+} */
+/* CSS for mobile view */
 @media (max-width: 480px) {
     .footer-contact a {
         font-size: 14px; /* Adjusted font size for very small screens */
@@ -532,6 +542,51 @@ color: #f39c12; /* Change color on hover */
     .nav-links li {
         position: relative;
         padding: 10px;
+        margin-left: 20px;
+    }
+    .nav-links {
+        max-height: 80vh;
+        max-width: fit-content;
+        overflow-y: auto;
+        
+    }
+    .nav-links li {
+        padding: 8px 12px; /* Adjust padding to fit more items */
+    }
+    .dropdown-menu {
+        position: relative; /* Keeps it inside the parent menu */
+        
+    }
+    .dropdown > a {
+        padding: 5px 10px; /* Adjust padding */
+        background: #a85e04; /* Set the background to match other items */
+        display: block; /* Ensures it spans the full width */
+        width: 100%; /* Make it match full width */
+        box-sizing: 10px; /* Ensures padding doesn't increase width */
+       
+    }
+    
+    
+    .navbar {
+        top: 0;
+        position: fixed; /* Ensures it stays within the screen */
     }
 }
 /* CSS for mobile view */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #875403;
+        width: 100%;
+        padding: 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
