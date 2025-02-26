@@ -31,11 +31,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
     const links = document.querySelectorAll(".nav-links a"); // Select all menu links
+     const nav = document.querySelector("nav");
+
 
     // Toggle menu when clicking the menu button
     menuToggle.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
+
+     menuToggle.addEventListener("click", function() {
+        nav.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!menuToggle.contains(event.target) && !nav.contains(event.target)) {
+            nav.classList.remove("active");
+        }
+    });
 
     // Close menu when clicking a menu link
     links.forEach(link => {
